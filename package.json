@@ -1,0 +1,26 @@
+{
+  "name": "express_db",
+  "version": "1.0.0",
+  "description": "Week 5 exercise 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisCasillasA/express_db.git"
+  },
+  "author": "LuisCasillasA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisCasillasA/express_db/issues"
+  },
+  "homepage": "https://github.com/LuisCasillasA/express_db#readme",
+  "devDependencies": {
+    "express": "^4.18.1",
+    "prisma": "^3.14.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.14.0"
+  }
+}
