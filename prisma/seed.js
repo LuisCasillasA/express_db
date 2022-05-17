@@ -43,7 +43,44 @@ const prisma = new PrismaClient();
       },
     });
 
-    console.log('Create 3 explorers');
+    const ajolonauta = await prisma.explorer_v2.upsert({
+      where: { name: 'Ajolonauta 1' },
+      update: {},
+      create: {
+        name: 'Ajolonauta 1',
+        lang: 'JavaScript',
+        missionCommander: 'Carlo',
+        enrollments: 3,
+        hasCertification: true
+      },
+    });
+
+    const ajolonauta2 = await prisma.explorer_v2.upsert({
+      where: { name: 'Ajolonauta 2' },
+      update: {},
+      create: {
+        name: 'Ajolonauta 2',
+        lang: 'Java',
+        missionCommander: 'Fer',
+        enrollments: 1,
+        hasCertification: true
+      },
+    });
+
+    const ajolonauta3 = await prisma.explorer_v2.upsert({
+      where: { name: 'Ajolonauta 3' },
+      update: {},
+      create: {
+        name: 'Ajolonauta 3',
+        lang: 'JavaScript',
+        missionCommander: 'Carlo',
+        enrollments: 2,
+        hasCertification: false
+      },
+    });
+
+    console.log('Create 3 explorers in explorers');
+    console.log('Create 3 explorers in explorers_v2');
   } catch(e) {
     console.error(e);
     process.exit(1);
