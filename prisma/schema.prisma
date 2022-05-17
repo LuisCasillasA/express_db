@@ -10,7 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Explorer {
+model explorer {
   id Int @id @default(autoincrement())
   name String @unique
   username String @db.VarChar(255)
