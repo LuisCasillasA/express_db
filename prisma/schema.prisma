@@ -28,3 +28,12 @@ model explorer_v2{
   enrollments Int
   hasCertification Boolean @default(false)
 }
+
+model mission_commander{
+  id Int @id @default(autoincrement())
+  name String @db.VarChar(255)
+  username String @unique
+  mainStack String @db.VarChar(255)
+  currentEnrollment Boolean @default(false)
+  hasAzureCertification Boolean @default(false)
+}
